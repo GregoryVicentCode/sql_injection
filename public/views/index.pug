@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title My Store
+  body
+    h1 This is My Store :D
+    nav
+      ul
+        li
+          a(href=`/`) All
+        li
+          a(href=`/products?name=clock`) clock
+        li
+          a(href=`/products?name=table`) table
+        li
+          a(href=`/products?name=candy`) candy
+        li
+          a(href=`/products?name=phone`) phone
+        li
+          a(href=`/products?name=ps2`) ps2
+        li
+          a(href=`/products?name=refrigerator`) refrigerator
+    each item in data
+      hr
+      article
+        h2=item.name
+        div
+          h3 info:
+          ul
+            li ID: #{item.id}
+            li PRICE: #{item.name}
+            li STOCK: #{item.in_stock}
